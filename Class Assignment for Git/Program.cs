@@ -10,6 +10,7 @@ namespace Class_Assignment_for_Git
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World");
         }
     }
 }
