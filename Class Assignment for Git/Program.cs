@@ -11,12 +11,18 @@ namespace Class_Assignment_for_Git
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int secretNum = rand.Next(0, 100);
+            int secretNum;
+            int startNum, endNum;
             int userGuess = -1;
             int guessCounter = 0;
             string winMessage;
 
-            Console.WriteLine("I'm thinking of a number between 1 and 100.");
+            Console.Write("Enter a starting number: ");
+            startNum = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter an ending number: ");
+            endNum = Convert.ToInt32(Console.ReadLine());
+            secretNum = rand.Next(startNum, endNum);
+            Console.WriteLine("I'm thinking of a number between " + startNum + " and " + endNum + ".");
             while (userGuess != secretNum)
             {
                 Console.Write("Guess: ");
